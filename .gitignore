@@ -1,0 +1,7 @@
+*.pyc
+*~
+__pycache__
+django2.2_env
+db.sqlite3
+/static
+.DS_Store
