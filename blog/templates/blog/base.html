@@ -9,11 +9,17 @@
     <title>Native</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/brands.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/solid.min.css' %}">
 </head>
 <body>
     <nav class="navbar-expand-lg fixed-top">
         <div class="page-header">
-            <h1><a class="navbar-brand" href="/">Native Blog</a></h1>
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"> <i class="fas fa-plus"></i> </a>
+            {% endif %}
+                <h1><a class="navbar-brand" href="/">Native Blog</a></h1>
         </div>  
     </nav>
     <br>
