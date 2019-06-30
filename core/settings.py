@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# When the login page is accessed directly, it will redirect a successful login to the top-level index
+# (the homepage of our blog)
+LOGIN_REDIRECT_URL = '/'
+
 
 # Application definition
 
