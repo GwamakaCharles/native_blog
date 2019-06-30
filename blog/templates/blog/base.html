@@ -17,6 +17,7 @@
     <nav class="navbar-expand-lg fixed-top">
         <div class="page-header">
             {% if user.is_authenticated %}
+                <a href="{% url 'post_draft_list' %}" class="top-menu"><i class="fas fa-edit"></i></a>
                 <a href="{% url 'post_new' %}" class="top-menu"> <i class="fas fa-plus"></i> </a>
             {% endif %}
                 <h1><a class="navbar-brand" href="/">Native Blog</a></h1>
